@@ -1,13 +1,12 @@
-#include <iostream>
+﻿#include <iostream>
 #include "VectorLibrary.h"
 #include "NumberLibrary.h"
 
-using namespace NumberLibrary;
 
 using namespace std;
 
 void testVectorOperations() {
-    cout << "=== Testing Vector Class ===" << endl << endl;
+    cout << "=== тесты ===" << endl << endl;
 
     Vector v1;
     Vector v2(Number(3.0), Number(4.0));
@@ -20,7 +19,6 @@ void testVectorOperations() {
 
     v1.setX(Number(5.0));
     v1.setY(Number(7.0));
-    cout << "After setX(5) and setY(7): (" << v1.getX().getValue() << ", " << v1.getY().getValue() << ")" << endl;
     cout << endl;
 
     Vector sum = v2 + v3;
@@ -37,14 +35,13 @@ void testVectorOperations() {
     cout << endl;
 
     Number len = v2.length();
-    cout << "Length of v2(3,4) = " << len.getValue() << endl;
 
     try {
         Number angle = v2.angle();
-        cout << "Angle of v2(3,4) = " << angle.getValue() << " radians" << endl;
+
     }
     catch (const exception& e) {
-        cout << "Error calculating angle: " << e.what() << endl;
+        cout << "ошибка" << e.what() << endl;
     }
     cout << endl;
 
@@ -53,7 +50,7 @@ void testVectorOperations() {
         Vector error = v2 / Number(0.0);
     }
     catch (const exception& e) {
-        cout << "Division by zero caught: " << e.what() << endl;
+        cout << "деление на ноль: " << e.what() << endl;
     }
 
     Vector vertical(Number(5.0), Number(0.0));
@@ -61,12 +58,12 @@ void testVectorOperations() {
         Number angle = vertical.angle();
     }
     catch (const exception& e) {
-        cout << "Angle calculation error: " << e.what() << endl;
+        cout << "ошибка " << e.what() << endl;
     }
 }
 
 void testComplexOperations() {
-    cout << "=== Testing Complex Vector Operations ===" << endl << endl;
+    cout << "=== все тесты пройдены ===" << endl << endl;
 
     Vector a(Number(2.0), Number(3.0));
     Vector b(Number(1.0), Number(4.0));
@@ -80,11 +77,11 @@ int main() {
         testVectorOperations();
         testComplexOperations();
 
-        cout << "=== All tests completed successfully! ===" << endl;
+        cout << "=== все тесты пройдены ===" << endl << endl;
 
     }
     catch (const exception& e) {
-        cout << "Unexpected exception: " << e.what() << endl;
+        cout << "ошибка: " << e.what() << endl;
         return 1;
     }
 

@@ -4,8 +4,6 @@
 #include <stdexcept>
 #include "pch.h"
 
-// Убраны лишние глобальные переменные (они не относятся к классу Vector)
-using namespace NumberLibrary;
 Number Vector::getX()
 {
     return x;
@@ -46,7 +44,7 @@ Vector Vector::operator*(Number scalar) const
 Vector Vector::operator/(Number scalar) const
 {
     if (scalar == Number(0.0)) {
-        throw std::runtime_error("Math error: Attempted to divide by Zero\n");
+        throw std::runtime_error("деление на ноль\n");
     }
     return Vector(Number(x) / scalar, Number(y) / scalar);
 }
@@ -60,7 +58,7 @@ Number Vector::length() const
 Number Vector::angle() const
 {
     if (y == Number(0.0)) {
-        throw std::runtime_error("Math error: Division by zero in angle calculation\n");
+        throw std::runtime_error("делелние на ноль\n");
     }
     return Number(std::atan(((Number(x) / y).getValue())));
 }

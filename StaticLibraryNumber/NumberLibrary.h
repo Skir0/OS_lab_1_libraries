@@ -1,7 +1,6 @@
 #pragma once
 
 
-namespace NumberLibrary {
 	class Number {
 
 
@@ -35,4 +34,4 @@ namespace NumberLibrary {
 
 	Number createNumber(double value);
 
-}
+

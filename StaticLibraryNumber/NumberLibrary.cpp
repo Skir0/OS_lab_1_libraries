@@ -1,7 +1,6 @@
 #include <stdexcept>
 #include "NumberLibrary.h"
 
-namespace NumberLibrary {
 	const Number Number::ZERO = 0;
 	const Number Number::ONE = 1;
 
@@ -51,5 +50,5 @@ namespace NumberLibrary {
 	Number createNumber(double value) {
 		return Number(value);
 	}
-}
+
 

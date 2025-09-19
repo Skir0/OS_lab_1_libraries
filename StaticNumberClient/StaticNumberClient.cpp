@@ -2,23 +2,23 @@
 #include "NumberLibrary.h"
 
 int main() {
-    std::cout << "Zero: " << NumberLibrary::Number::ZERO.getValue() << std::endl;
-    std::cout << "One: " << NumberLibrary::Number::ONE.getValue() << std::endl;
+    std::cout << "Zero: " << Number::ZERO.getValue() << std::endl;
+    std::cout << "One: " << Number::ONE.getValue() << std::endl;
 
-    NumberLibrary::Number a = NumberLibrary::createNumber(10.5);
-    NumberLibrary::Number b = NumberLibrary::createNumber(2.5);
+    Number a = createNumber(10.5);
+    Number b = createNumber(2.5);
 
-    NumberLibrary::Number sum = a + b;
-    NumberLibrary::Number diff = a - b;
-    NumberLibrary::Number product = a * b;
-    NumberLibrary::Number quotient = a / b;
+    Number sum = a + b;
+    Number diff = a - b;
+    Number product = a * b;
+    Number quotient = a / b;
 
     std::cout << "a + b = " << sum.getValue() << std::endl;
     std::cout << "a - b = " << diff.getValue() << std::endl;
     std::cout << "a * b = " << product.getValue() << std::endl;
     std::cout << "a / b = " << quotient.getValue() << std::endl;
 
-    NumberLibrary::Number negative = -a;
+    Number negative = -a;
     std::cout << "-a = " << negative.getValue() << std::endl;
 
     return 0;

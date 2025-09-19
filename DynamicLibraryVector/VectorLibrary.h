@@ -7,7 +7,6 @@
 #endif
 
 #include "NumberLibrary.h"
-using namespace NumberLibrary;
 
 class VECTORLIBRARY_API Vector {
 private:
